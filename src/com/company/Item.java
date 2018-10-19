@@ -5,16 +5,19 @@ public class Item {
     private double price;
     private int quantity;
     private boolean taxable;
+    private String state;
 
     public Item(){
 
     }
 
-    public Item(String name, double price, int quantity, boolean taxable) {
+    public Item(String name, double price, int quantity, boolean taxable, String state) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
         this.taxable = taxable;
+        this.state = state;
+
     }
 
     public String getName() {
@@ -39,8 +42,8 @@ public class Item {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
-    }
 
+    }
     public double cost(){
         double subTotal = price * quantity;
         return subTotal;
@@ -54,4 +57,11 @@ public class Item {
         this.taxable = taxable;
     }
 
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
 }
